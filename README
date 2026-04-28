@@ -1,14 +1,39 @@
-DebridEnchant
+🚀 DebridEnchant — Amélioration d’enchantements équilibrée & vanilla‑friendly
 
 Est t'un plugin Minecraft open-source en cours de développement par VanillaSurvie.
-Compatible Paper/Spigot 1.21.+.
+Compatible Paper/Spigot 1.21.+
+Permettant aux joueurs d’améliorer leurs enchantements au‑delà des limites vanilla, tout en conservant une progression équilibrée, RP, et anti‑cheat.
+Le système utilise l’XP du joueur, des coûts dynamiques, et une configuration complète.
 
 ---
 
 ## ✨ Fonctionnalités
 
-- À venir
-- Etc.
+🔒 Progression 100% cohérente avec Minecraft
+
+    Impossible d’améliorer un enchantement tant que le niveau vanilla maximum n’est pas atteint.
+    → Le joueur doit utiliser des livres ou fusionner des items comme en vanilla.
+      Une fois le niveau vanilla atteint, le plugin permet d’aller au‑delà (ex : Sharpness 6, 7…).
+
+  ⚙️ Système d’amélioration via XP
+    - Chaque amélioration coûte de l’XP.
+     Le coût dépend :
+       - Du niveau actuel, 
+       - D’un multiplicateur par enchantement
+       - D’un facteur global configurable.
+
+  📈 Niveaux maximums personnalisables
+    - Chaque enchantement possède un niveau maximum custom défini dans config.yml.
+      Exemple : Sharpness 7, Efficiency 7, Protection 6…
+
+  🎨 Effets visuels configurables
+     TITLE personnalisable (texte dans fr_FR.yml / en_US.yml).
+     - Durées configurables dans config.yml.
+
+  📝 Logs complets
+     - Log console détaillé.
+     - Log joueur dans un fichier dédié.
+       Historique des améliorations (enchantement, niveaux, coût, item).
 (Cette section sera complétée au fur et à mesure du développement.)
 ---
 
@@ -22,7 +47,18 @@ Compatible Paper/Spigot 1.21.+.
 ⚙️ Configuration
 
 Le fichier config.yml permet de personnaliser le comportement du plugin.
-(Cette section sera complétée au fur et à mesure du développement.)
+(Cette section sera complétée au fur et à mesure du développement dans le fichier lui même.)
+
+🧠 Fonctionnement interne (à mesure du développement)
+
+    1-  Le joueur shift‑clic sur le slot résultat de l’enclume.
+    2-  Le plugin détecte l’enchantement présent.
+    3- Anti‑cheat : si le niveau actuel < niveau vanilla → amélioration refusée.
+    4- Vérification du niveau maximum custom.
+    5- Calcul du coût XP.
+    6- Débit de l’XP.
+    7- Application du nouvel enchantement.
+    8- TITLE + logs + mise à jour du slot.
 
 🤝 Contributions
 
@@ -52,6 +88,5 @@ Site : https://vanillasurvie.fr
 Organisation GitHub : https://github.com/VanillaSurvie (github.com in Bing)
 
 👤 Auteur
-
 Développé par Speedangel91  
 Architecte & Creative Director – VanillaSurvie
