@@ -1,0 +1,16 @@
+name: DebridEnchant
+version: 1.0
+main: fr.speedangel91.debridenchant.DebridEnchant
+api-version: 1.21
+author: Speedangel91
+
+commands:
+  hidecommands:
+    description: "Ajoute un enchantement sans limite"
+    usage: "/debridenchant <enchant> <niveau>"
+    permission: debridenchant.use
+
+permissions:
+  debridenchant.use:
+    description: "Permet d'utiliser /debridenchant"
+    default: op
