@@ -1,16 +1,26 @@
 name: DebridEnchant
 version: 1.0
+version: 0.7-SNAPSHOT
 main: fr.speedangel91.debridenchant.DebridEnchant
 api-version: 1.21
 author: Speedangel91
+description: "Amélioration des enchantements via enclume avec niveaux illimités et système XP avancé."
 
 commands:
   hidecommands:
     description: "Ajoute un enchantement sans limite"
     usage: "/debridenchant <enchant> <niveau>"
     permission: debridenchant.use
+  debridenchant:
+    description: "Commande principale de DebridEnchant."
+    usage: "/debridenchant reload"
+    permission: debridenchant.admin
 
 permissions:
-  debridenchant.use:
-    description: "Permet d'utiliser /debridenchant"
+  debridenchant.admin:
+    description: "Permet d'utiliser /debridenchant reload"
     default: op
+
+  debridenchant.use:
+    description: "Permet d'utiliser l'amélioration d'enchantements via l'enclume."
+    default: false

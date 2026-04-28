@@ -1,0 +1,13 @@
+prefix: "&6[&eDebridEnchant&6] &r"
+
+not-enough-xp: "%prefix%&cYou don't have enough XP (&e%cost%&c required)."
+max-level: "%prefix%&eYou reached the maximum level for this enchantment."
+upgraded: "%prefix%&aEnchantment upgraded to level &e%level%&a!"
+
+reload-success: "%prefix%&aConfiguration reloaded successfully."
+no-permission: "%prefix%&cYou don't have permission."
+usage-reload: "%prefix%&eUsage: /debridenchant reload"
+no-permission-use: "%prefix%&cYou don't have permission to upgrade enchantments."
+title-upgrade:
+  title: "&6%enchant%"
+  subtitle: "&eLevel %level%"

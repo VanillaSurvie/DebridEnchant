@@ -1,0 +1,144 @@
+# ===============================
+#   DebridEnchant Configuration
+# ===============================
+
+lang: fr_FR
+
+xp-cost:
+  base: 10          # Coût fixe ajouté à chaque amélioration
+  factor: 2.0       # Multiplicateur global appliqué au coût vanilla
+
+messages:
+  not-enough-xp: "&cTu n'as pas assez d'XP (&e%cost%&c requis)."
+  max-level: "&eTu as atteint le niveau maximum pour cet enchantement."
+  upgraded: "&aEnchantement amélioré au niveau &e%level%&a !"
+
+title-effects:
+  enabled: true
+  fade-in: 5
+  stay: 20
+  fade-out: 5
+
+# ===============================
+#   Niveaux maximums par enchantement
+# ===============================
+#Quand cette option est true, le plugin oblige le joueur à atteindre le niveau vanilla maximum
+#avant de pouvoir dépasser les niveau Vanilla via d’upgrade XP.
+#Quand elle est false, le plugin fonctionne en montée libre jusqu’au max-levels.  
+require-vanilla-max: true 
+
+max-levels:
+  # ARMURE
+  AQUA_AFFINITY: 1
+  BLAST_PROTECTION: 6 #Cohérent, pas cheat
+  FIRE_PROTECTION: 6
+  PROJECTILE_PROTECTION: 6
+  PROTECTION: 6  #Pas plus sinon invincible
+  RESPIRATION: 5  #RP, pas cheat
+  THORNS: 4  #5+ devient trop violent
+  DEPTH_STRIDER: 4  #5+ trop rapide
+  FEATHER_FALLING: 6
+  FROST_WALKER: 2  #Ne pas augmenter (bugs)
+  SOUL_SPEED: 4  
+  SWIFT_SNEAK: 4
+  BINDING_CURSE: 1  #Vanilla
+  VANISHING_CURSE: 1  #Vanilla
+
+  # ARMES / COMBAT
+  SHARPNESS: 7  #8+ = one‑shot
+  SMITE: 7
+  BANE_OF_ARTHROPODS: 7
+  FIRE_ASPECT: 3  #4+ trop long
+  LOOTING: 5  #6+ casse l’économie
+  KNOCKBACK: 3  #4+ injouable
+  SWEEPING_EDGE: 4
+  BREACH: 5  #Pas plus sinon armures useless
+  DENSITY: 6
+  LUNGE: 4  #5+ trop mobile
+
+  # OUTILS
+  EFFICIENCY: 7  #8+ lag de blocs
+  UNBREAKING: 5
+  SILK_TOUCH: 1  #Ne pas augmenter
+  FORTUNE: 5  #6+ économie cassée
+
+  # ARCS / ARBALETTES
+  POWER: 7  #8+ one‑shot
+  PUNCH: 3
+  FLAME: 1
+  INFINITY: 1
+  PIERCING: 5
+  MULTISHOT: 1
+  QUICK_CHARGE: 4  #5+ trop rapide
+
+  # TRIDENT
+  LOYALTY: 4
+  CHANNELING: 1
+  RIPTIDE: 4
+  IMPALING: 7
+
+  # AUTRES
+  MENDING: 1  #Ne pas augmenter
+  LUCK_OF_THE_SEA: 5
+  LURE: 5
+  WIND_BURST: 4  #5+ trop mobile
+# ===============================
+#   Multiplicateurs vanilla
+#   (utilisés pour calculer le coût XP)
+# ===============================
+
+vanilla-multipliers:
+  # ARMURE
+  AQUA_AFFINITY: 2
+  BLAST_PROTECTION: 2
+  FIRE_PROTECTION: 2
+  PROJECTILE_PROTECTION: 2
+  PROTECTION: 1
+  RESPIRATION: 2
+  THORNS: 4
+  DEPTH_STRIDER: 2
+  FEATHER_FALLING: 2
+  FROST_WALKER: 4
+  SOUL_SPEED: 8
+  SWIFT_SNEAK: 4
+  BINDING_CURSE: 4
+  VANISHING_CURSE: 4
+
+  # ARMES / COMBAT
+  SHARPNESS: 1
+  SMITE: 1
+  BANE_OF_ARTHROPODS: 1
+  FIRE_ASPECT: 2
+  LOOTING: 2
+  KNOCKBACK: 2
+  SWEEPING_EDGE: 2
+  BREACH: 4
+  DENSITY: 4
+  LUNGE: 4
+
+  # OUTILS
+  EFFICIENCY: 1
+  UNBREAKING: 1
+  SILK_TOUCH: 4
+  FORTUNE: 2
+
+  # ARCS / ARBALETTES
+  POWER: 1
+  PUNCH: 2
+  FLAME: 4
+  INFINITY: 4
+  PIERCING: 1
+  MULTISHOT: 4
+  QUICK_CHARGE: 1
+
+  # TRIDENT
+  LOYALTY: 1
+  CHANNELING: 4
+  RIPTIDE: 2
+  IMPALING: 2
+
+  # AUTRES
+  MENDING: 4
+  LUCK_OF_THE_SEA: 2
+  LURE: 2
+  WIND_BURST: 4
