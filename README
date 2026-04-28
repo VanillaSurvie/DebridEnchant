@@ -1,0 +1,57 @@
+DebridEnchant
+
+Est t'un plugin Minecraft open-source en cours de développement par VanillaSurvie.
+Compatible Paper/Spigot 1.21.+.
+
+---
+
+## ✨ Fonctionnalités
+
+- À venir
+- Etc.
+(Cette section sera complétée au fur et à mesure du développement.)
+---
+
+## 📦 Installation
+
+1. Télécharge la dernière version dans l’onglet **Releases**.
+2. Place le fichier `.jar` dans le dossier `plugins/`.
+3. Redémarre ton serveur.
+4. Le plugin génère automatiquement son dossier de configuration.
+
+⚙️ Configuration
+
+Le fichier config.yml permet de personnaliser le comportement du plugin.
+(Cette section sera complétée au fur et à mesure du développement.)
+
+🤝 Contributions
+
+Les contributions sont les bienvenues.
+
+    - Forkez le projet
+    - Créez une branche
+    - Faites vos modifications
+    - Ouvrez une Pull Request
+
+Merci de respecter le style de code VanillaSurvie.
+
+🔐 Licence
+
+Ce plugin est distribué sous la Licence VanillaSurvie Open-Source  
+(basée sur la GNU GPL v3).
+
+Vous êtes libre d’utiliser, modifier et redistribuer le plugin, tant que toute version modifiée reste open‑source et sous la même licence.
+
+Voir le fichier LICENSE pour plus d’informations.
+
+🌐 Projet VanillaSurvie
+
+Ce plugin fait partie de l’écosystème open-source de VanillaSurvie.
+
+Site : https://vanillasurvie.fr  
+Organisation GitHub : https://github.com/VanillaSurvie (github.com in Bing)
+
+👤 Auteur
+
+Développé par Speedangel91  
+Architecte & Creative Director – VanillaSurvie
