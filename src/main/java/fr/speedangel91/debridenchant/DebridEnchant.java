@@ -2,6 +2,8 @@ package fr.speedangel91.debridenchant;
 
 import fr.speedangel91.debridenchant.commands.DebridEnchantCommand;
 import fr.speedangel91.debridenchant.listeners.AnvilListener;
+import fr.speedangel91.debridenchant.upgrade.UpgradeExecutor;
+import fr.speedangel91.debridenchant.upgrade.UpgradeMenuListener;
 import fr.speedangel91.debridenchant.utils.EnchantConfig;
 import fr.speedangel91.debridenchant.utils.MessageManager;
 import fr.speedangel91.debridenchant.utils.PlayerLogManager;
@@ -14,6 +16,10 @@ public class DebridEnchant extends JavaPlugin {
     private MessageManager messageManager;
     private EnchantConfig enchantConfig;
     private PlayerLogManager playerLogManager;
+
+    // ➕ NOUVEAU : gestionnaire d’upgrade
+    private UpgradeExecutor upgradeExecutor;
+
     public PlayerLogManager getPlayerLogManager() {
         return playerLogManager;
     }
@@ -28,8 +34,14 @@ public class DebridEnchant extends JavaPlugin {
         enchantConfig = new EnchantConfig(this);
         playerLogManager = new PlayerLogManager(this);
 
+        // ➕ NOUVEAU : initialisation de l’executor
+        upgradeExecutor = new UpgradeExecutor(this);
+
         // Enregistre les listeners
         Bukkit.getPluginManager().registerEvents(new AnvilListener(this), this);
+
+        // ➕ NOUVEAU : listener du GUI
+        Bukkit.getPluginManager().registerEvents(new UpgradeMenuListener(this), this);
 
         // Enregistre la commande
         if (getCommand("debridenchant") != null) {
@@ -62,5 +74,10 @@ public class DebridEnchant extends JavaPlugin {
 
     public EnchantConfig getEnchantConfig() {
         return enchantConfig;
+    }
+
+    // ➕ NOUVEAU : getter pour l’executor
+    public UpgradeExecutor getUpgradeExecutor() {
+        return upgradeExecutor;
     }
 }
