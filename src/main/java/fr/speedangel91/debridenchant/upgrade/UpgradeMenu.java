@@ -5,14 +5,17 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.*;
-import org.bukkit.inventory.meta.ItemMeta;
-
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta; // ✔ correct
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class UpgradeMenu {
+
+    // 🔥 Titre unique et constant pour détecter le GUI dans InventoryCloseEvent
+    public static final String TITLE = "§8Améliorations disponibles";
 
     private final DebridEnchant plugin;
     private final Player player;
@@ -30,7 +33,8 @@ public class UpgradeMenu {
 
     public void open() {
 
-        Inventory inv = Bukkit.createInventory(null, 27, "Améliorations disponibles");
+        // GUI 27 slots avec titre constant
+        Inventory inv = Bukkit.createInventory(null, 27, TITLE);
 
         // Option 1 : un seul enchantement
         Enchantment first = eligible.keySet().iterator().next();
@@ -38,7 +42,7 @@ public class UpgradeMenu {
         int costOne = preview.getCostOne(first, lvl);
 
         ItemStack one = new ItemStack(Material.EMERALD);
-        ItemMeta m1 = one.getItemMeta();
+        ItemMeta m1 = one.getItemMeta(); // ✔ propre
         m1.setDisplayName("§aAméliorer un enchantement");
         List<String> lore1 = new ArrayList<>();
         lore1.add("§7" + first.getKey().getKey() + " §e" + lvl + " → " + (lvl + 1));
@@ -52,7 +56,7 @@ public class UpgradeMenu {
         int totalCost = preview.getCostAll(eligible);
 
         ItemStack all = new ItemStack(Material.DIAMOND);
-        ItemMeta m2 = all.getItemMeta();
+        ItemMeta m2 = all.getItemMeta(); // ✔ propre
         m2.setDisplayName("§bAméliorer tous les enchantements");
         List<String> lore2 = new ArrayList<>();
 
@@ -70,6 +74,7 @@ public class UpgradeMenu {
         // Aperçu de l'item
         inv.setItem(13, item.clone());
 
+        // Ouverture du GUI
         player.openInventory(inv);
     }
 }

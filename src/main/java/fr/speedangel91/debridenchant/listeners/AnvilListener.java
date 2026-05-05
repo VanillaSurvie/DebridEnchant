@@ -25,10 +25,7 @@ public class AnvilListener implements Listener {
     @EventHandler
     public void onAnvilClick(InventoryClickEvent e) {
 
-        // Vérification joueur
         if (!(e.getWhoClicked() instanceof Player player)) return;
-
-        // Vérification enclume
         if (!(e.getInventory() instanceof AnvilInventory anvil)) return;
 
         // Slot résultat uniquement
@@ -51,16 +48,25 @@ public class AnvilListener implements Listener {
         UpgradePreview preview = new UpgradePreview(plugin);
         Map<Enchantment, Integer> eligible = preview.getEligible(result, player);
 
-        // Aucun enchantement améliorable
         if (eligible.isEmpty()) {
             player.sendMessage("§cAucun enchantement de cet item ne peut être amélioré.");
             return;
         }
 
-        // Enregistrer le contexte pour UpgradeExecutor
-        plugin.getUpgradeExecutor().setContext(eligible, result);
+        // Sauvegarde des items d'entrée
+        ItemStack original0 = anvil.getItem(0);
+        ItemStack original1 = anvil.getItem(1);
 
-        // Ouvrir le GUI de choix
+        // 🔥 Anti-duplication : vider l'enclume AVANT fermeture
+        anvil.setItem(0, null);
+        anvil.setItem(1, null);
+        anvil.setItem(2, null);
+
+        // Enregistrer le contexte pour UpgradeExecutor
+        plugin.getUpgradeExecutor().setContext(player, eligible, result, original0, original1);
+
+        // Ouvrir le GUI
         new UpgradeMenu(plugin, player, result, eligible).open();
     }
 }
+

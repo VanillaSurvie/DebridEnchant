@@ -3,6 +3,7 @@ package fr.speedangel91.debridenchant;
 import fr.speedangel91.debridenchant.commands.DebridEnchantCommand;
 import fr.speedangel91.debridenchant.listeners.AnvilListener;
 import fr.speedangel91.debridenchant.upgrade.UpgradeExecutor;
+import fr.speedangel91.debridenchant.upgrade.UpgradeMenuCloseListener;
 import fr.speedangel91.debridenchant.upgrade.UpgradeMenuListener;
 import fr.speedangel91.debridenchant.utils.EnchantConfig;
 import fr.speedangel91.debridenchant.utils.MessageManager;
@@ -46,6 +47,8 @@ public class DebridEnchant extends JavaPlugin {
 
         // ➕ NOUVEAU : listener du GUI
         Bukkit.getPluginManager().registerEvents(new UpgradeMenuListener(this), this);
+        
+        Bukkit.getPluginManager().registerEvents(new UpgradeMenuCloseListener(this), this);
 
         // Enregistre la commande
         if (getCommand("debridenchant") != null) {

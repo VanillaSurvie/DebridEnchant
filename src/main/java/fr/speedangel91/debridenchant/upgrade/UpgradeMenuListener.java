@@ -19,10 +19,14 @@ public class UpgradeMenuListener implements Listener {
     public void onClick(InventoryClickEvent e) {
 
         if (!(e.getWhoClicked() instanceof Player player)) return;
-        if (!e.getView().getTitle().equals("Améliorations disponibles")) return;
 
+        // 🔥 Détection EXACTE du GUI
+        if (!e.getView().getTitle().equals(UpgradeMenu.TITLE)) return;
+
+        // Empêche de prendre les items du GUI
         e.setCancelled(true);
 
+        if (e.getClickedInventory() == null) return;
         if (e.getCurrentItem() == null) return;
 
         Material type = e.getCurrentItem().getType();
@@ -31,6 +35,7 @@ public class UpgradeMenuListener implements Listener {
         if (type == Material.EMERALD) {
             plugin.getUpgradeExecutor().upgradeOne(player);
             player.closeInventory();
+            return;
         }
 
         // Améliorer tous les enchantements
@@ -40,4 +45,3 @@ public class UpgradeMenuListener implements Listener {
         }
     }
 }
-

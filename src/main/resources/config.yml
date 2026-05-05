@@ -5,19 +5,16 @@
 lang: fr_FR
 
 xp-cost:
-  base: 10          # Coût fixe ajouté à chaque amélioration
-  factor: 2.0       # Multiplicateur global appliqué au coût vanilla
-
-messages:
-  not-enough-xp: "&cTu n'as pas assez d'XP (&e%cost%&c requis)."
-  max-level: "&eTu as atteint le niveau maximum pour cet enchantement."
-  upgraded: "&aEnchantement amélioré au niveau &e%level%&a !"
+  base: 10
+  factor: 2.0
 
 title-effects:
   enabled: true
   fade-in: 5
   stay: 20
   fade-out: 5
+
+require-vanilla-max: true
 
 # ===============================
 #   Niveaux maximums par enchantement

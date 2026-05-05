@@ -1,13 +1,27 @@
 prefix: "&6[&eDebridEnchant&6] &r"
 
+# ===============================
+#   Messages généraux
+# ===============================
+
 not-enough-xp: "%prefix%&cTu n'as pas assez d'XP (&e%cost%&c requis)."
 max-level: "%prefix%&eTu as atteint le niveau maximum pour cet enchantement."
 upgraded: "%prefix%&aEnchantement amélioré au niveau &e%level%&a !"
+upgraded-all: "%prefix%&aTous les enchantements ont été améliorés !"
+
+no-eligible: "%prefix%&cAucun enchantement de cet item ne peut être amélioré."
 
 reload-success: "%prefix%&aConfiguration rechargée avec succès."
 no-permission: "%prefix%&cTu n'as pas la permission."
 usage-reload: "%prefix%&eUsage : /debridenchant reload"
 no-permission-use: "%prefix%&cTu n'as pas la permission d'améliorer des enchantements."
+
+# ===============================
+#   Titres d'amélioration
+# ===============================
+# Le texte du TITLE est ici
+# Les durées (fade-in, stay, fade-out) sont dans config.yml
+
 title-upgrade:
-  title: "&6%enchant%"
-  subtitle: "&eNiveau %level%"
+  title: "&6Amélioration !"
+  subtitle: "&e%enchant% &7→ &a%level%"
