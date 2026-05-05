@@ -8,6 +8,7 @@ import fr.speedangel91.debridenchant.utils.EnchantConfig;
 import fr.speedangel91.debridenchant.utils.MessageManager;
 import fr.speedangel91.debridenchant.utils.PlayerLogManager;
 
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -26,6 +27,9 @@ public class DebridEnchant extends JavaPlugin {
 
     @Override
     public void onEnable() {
+    	int pluginId = 31119;
+        Metrics metrics = new Metrics(this, pluginId);
+      
         // Génère config.yml si absent
         saveDefaultConfig();
 

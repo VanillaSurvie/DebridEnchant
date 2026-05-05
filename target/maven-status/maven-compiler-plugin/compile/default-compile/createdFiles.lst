@@ -1,0 +1,10 @@
+fr\speedangel91\debridenchant\commands\DebridEnchantCommand.class
+fr\speedangel91\debridenchant\utils\PlayerLogManager.class
+fr\speedangel91\debridenchant\upgrade\UpgradeMenuListener.class
+fr\speedangel91\debridenchant\upgrade\UpgradeMenu.class
+fr\speedangel91\debridenchant\listeners\AnvilListener.class
+fr\speedangel91\debridenchant\upgrade\UpgradeExecutor.class
+fr\speedangel91\debridenchant\upgrade\UpgradePreview.class
+fr\speedangel91\debridenchant\utils\EnchantConfig.class
+fr\speedangel91\debridenchant\utils\MessageManager.class
+fr\speedangel91\debridenchant\DebridEnchant.class
